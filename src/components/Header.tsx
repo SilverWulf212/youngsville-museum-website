@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -18,7 +18,6 @@ const navigation = [
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,47 +61,15 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navigation.map((item) => (
-              <div
+              <Link
                 key={item.name}
-                className="relative"
-                onMouseEnter={() => item.children && setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                href={item.href}
+                className={`text-sm font-medium transition-colors duration-300 hover:text-museum-red ${
+                  isScrolled ? 'text-museum-charcoal' : 'text-white'
+                }`}
               >
-                <Link
-                  href={item.href}
-                  className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 hover:text-museum-red ${
-                    isScrolled ? 'text-museum-charcoal' : 'text-white'
-                  }`}
-                >
-                  {item.name}
-                  {item.children && <ChevronDown className="w-4 h-4" />}
-                </Link>
-
-                {/* Dropdown */}
-                <AnimatePresence>
-                  {item.children && activeDropdown === item.name && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 pt-2"
-                    >
-                      <div className="bg-white rounded-lg shadow-xl py-2 min-w-[200px]">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-4 py-2 text-sm text-museum-charcoal hover:bg-museum-cream hover:text-museum-red transition-colors"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+                {item.name}
+              </Link>
             ))}
 
             {/* CTA Button */}
@@ -148,29 +115,14 @@ export default function Header() {
             <div className="container-custom py-6">
               <div className="flex flex-col gap-4">
                 {navigation.map((item) => (
-                  <div key={item.name}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="block py-2 text-museum-charcoal font-medium hover:text-museum-red transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                    {item.children && (
-                      <div className="pl-4 mt-2 space-y-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                            className="block py-1 text-sm text-museum-charcoal-light hover:text-museum-red transition-colors"
-                          >
-                            {child.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block py-2 text-museum-charcoal font-medium hover:text-museum-red transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 ))}
                 <Link
                   href="/support"
