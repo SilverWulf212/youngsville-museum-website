@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -13,8 +15,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.youngsvillehistorymuseum.com'),
   title: {
-    default: 'Youngsville History Museum | Preserving Louisiana Heritage Since 2025',
-    template: '%s | Youngsville History Museum',
+    default: 'Youngsville History Museum | (337) 251-3216 | Louisiana Heritage | Acadian History Exhibits',
+    template: '%s',
   },
   description: 'Discover the rich Acadian heritage and history of Youngsville, Louisiana at the Youngsville History Museum. Explore exhibits, artifacts, and stories from over 200 years of Louisiana culture. Plan your visit today.',
   keywords: [
@@ -156,6 +158,8 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )

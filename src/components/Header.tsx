@@ -8,15 +8,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  {
-    name: 'History',
-    href: '/history',
-    children: [
-      { name: 'Youngsville History', href: '/history' },
-      { name: 'Timeline', href: '/history/timeline' },
-      { name: 'Notable Figures', href: '/history/notable-figures' },
-    ],
-  },
+  { name: 'History', href: '/history' },
   { name: 'Visit', href: '/visit' },
   { name: 'Events', href: '/events' },
   { name: 'Support', href: '/support' },

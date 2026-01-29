@@ -7,8 +7,8 @@ const footerLinks = {
   explore: [
     { name: 'About the Museum', href: '/about' },
     { name: 'Youngsville History', href: '/history' },
-    { name: 'Timeline', href: '/history/timeline' },
-    { name: 'Photo Gallery', href: '/gallery' },
+    { name: 'Timeline', href: '/history' },
+    { name: 'Events & Programs', href: '/events' },
   ],
   visit: [
     { name: 'Plan Your Visit', href: '/visit' },
@@ -58,7 +58,9 @@ export default function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/youngsvillehistorymuseum"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-museum-red transition-colors"
                 aria-label="Instagram"
               >
