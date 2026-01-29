@@ -86,10 +86,11 @@ export default function AboutPageClient() {
                   out what would become known as &quot;Royville.&quot;
                 </p>
                 <p>
-                  By 1859, the settlement had grown substantial enough to establish St. Anne
-                  Catholic Church, one of the oldest parishes in Lafayette. The church still
-                  stands on Church Street, the community&apos;s oldest thoroughfare, a reminder of
-                  the faith that has anchored this community through generations.
+                  By 1859, the settlement had grown substantial enough to establish St. Etienne
+                  Catholic Church on July 29—renamed St. Anne in 1869 and one of the oldest
+                  parishes in Lafayette. The church still stands on Church Street, the community&apos;s
+                  oldest thoroughfare, a reminder of the faith that has anchored this community
+                  through generations.
                 </p>
                 <p>
                   When the U.S. Post Office required a name change in 1908, residents chose

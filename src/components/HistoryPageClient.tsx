@@ -24,8 +24,8 @@ const timelineData = [
       },
       {
         year: '1859',
-        title: 'St. Anne Catholic Church',
-        description: 'The community establishes St. Anne Church on Church Street—one of the oldest Catholic parishes in Lafayette. The church becomes the spiritual and social center of the growing community.',
+        title: 'St. Etienne Catholic Church Founded',
+        description: 'On July 29, the community establishes St. Etienne (St. Stephen) Church on Church Street—one of the oldest Catholic parishes in Lafayette. Renamed St. Anne in 1869, the church becomes the spiritual and social center of the growing community.',
         type: 'milestone',
       },
     ],
@@ -411,8 +411,8 @@ export default function HistoryPageClient() {
                 <li className="flex items-start gap-4">
                   <span className="text-museum-red text-xl mt-1">*</span>
                   <span className="text-white/85 leading-relaxed">
-                    St. Anne Church, founded in 1859, remains one of the oldest Catholic
-                    parishes in Lafayette Parish
+                    St. Anne Church, originally founded as St. Etienne in 1859 and renamed
+                    in 1869, remains one of the oldest Catholic parishes in Lafayette Parish
                   </span>
                 </li>
                 <li className="flex items-start gap-4">

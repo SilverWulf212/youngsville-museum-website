@@ -311,7 +311,7 @@ export default function HomePageClient() {
             {[
               { year: '1755', title: 'Grand Dérangement', desc: 'British begin expelling 11,500 Acadians from Nova Scotia, beginning their journey to Louisiana.' },
               { year: '1800s', title: 'Royville Founded', desc: 'George Roy and his son Desire establish the settlement.' },
-              { year: '1859', title: 'St. Anne Church', desc: 'One of Lafayette Parish\'s oldest Catholic churches is founded.' },
+              { year: '1859', title: 'St. Etienne Church', desc: 'One of Lafayette Parish\'s oldest Catholic churches is founded July 29. Renamed St. Anne in 1869.' },
               { year: '1908', title: 'Youngsville Named', desc: 'Post Office requests name change; "young village" is chosen.' },
               { year: '1983', title: 'Town Status', desc: 'Governor Treen officially declares Youngsville a town.' },
               { year: '2006', title: 'City Status', desc: 'Elevated to city after 300%+ population growth.' },
